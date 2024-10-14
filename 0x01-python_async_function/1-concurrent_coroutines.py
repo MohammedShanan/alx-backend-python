@@ -23,5 +23,5 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
         List[float]: A list of all the delays in ascending order.
     """
     routine = [wait_random(max_delay) for i in range(n)]
-    wait_times = asyncio.gather(*routine)
-    return wait_times.sort()
+    wait_times = await asyncio.gather(*routine)
+    return sorted(wait_times)
