@@ -54,14 +54,14 @@ class TestGithubOrgClient(unittest.TestCase):
             "repos": [
                 {
                     "id": 100,
-                    "name": "TaskTracker",
+                    "name": "Test",
                     "private": False,
                     "owner": {
                         "login": "google",
                         "id": 200,
                     },
                     "fork": False,
-                    "url": "https://api.github.com/repos/google/TaskTracker",
+                    "url": "https://api.github.com/repos/google/Test",
                     "created_at": "2024-04-19T00:31:37Z",
                     "updated_at": "2024-11-23T11:53:58Z",
                     "has_issues": True,
@@ -95,7 +95,7 @@ class TestGithubOrgClient(unittest.TestCase):
             self.assertEqual(
                 GithubOrgClient("google").public_repos(),
                 [
-                    "TaskTracker",
+                    "Test",
                     "Tekken",
                 ],
             )
